@@ -9,13 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoList">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name="com.codingninjassrm.letstodoapp.AddItem"/>
+        <activity
+            android:name=".HomepageActivity"
+            android:label="All Tasks" />
+        <activity android:name=".SignupActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
