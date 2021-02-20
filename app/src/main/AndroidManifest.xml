@@ -9,8 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoList">
-        <activity android:name=".ProfileActivity"></activity>
-        <activity android:name="com.codingninjassrm.letstodoapp.AddItem"/>
+        <activity android:name=".ProfileActivity"
+            android:label="Profile">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomepageActivity"/>
+        </activity>
+        <activity android:name="com.codingninjassrm.letstodoapp.AddItem"
+            android:label="Add Item">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomepageActivity"/>
+        </activity>
         <activity
             android:name=".HomepageActivity"
             android:label="All Tasks" />

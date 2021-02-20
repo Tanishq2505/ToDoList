@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="57dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:elevation="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/tasks_layout_cv"
+    android:orientation="vertical"
+    android:backgroundTintMode="screen"
+    android:background="@drawable/bg_taskname">
+
+    <TextView
+        android:id="@+id/task_name_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="13dp"
+        android:text="All Tasks"
+
+        android:textSize="18sp"
+        />
+
+
+
+
+
+</RelativeLayout>

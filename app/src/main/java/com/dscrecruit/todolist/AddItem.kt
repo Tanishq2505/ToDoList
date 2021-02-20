@@ -19,6 +19,7 @@ import com.dscrecruit.todolist.R
 import com.dscrecruit.todolist.taskname
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import org.w3c.dom.Text
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -46,8 +47,7 @@ class AddItem : AppCompatActivity() {
     var d1=false
     var editText:EditText?=null
     var editTextnote:EditText?=null
-    var textView2:TextView? = null
-    var textView4:TextView? = null
+
 
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -57,8 +57,9 @@ class AddItem : AppCompatActivity() {
         val currentFirebaseUser = FirebaseAuth.getInstance().currentUser
         createNotificationChannel()
         txtView1 = findViewById<View>(R.id.textView) as TextView
-        txtView2 = findViewById<View>(R.id.textView2) as TextView
-        txtView3 = findViewById<View>(R.id.textView3) as TextView
+        val txtView2 = findViewById<View>(R.id.textView2)
+        val txtView3 = findViewById<View>(R.id.textView3)
+        val txtView4 = findViewById<View>(R.id.textView4)
         note = findViewById<View>(R.id.note) as TextView
         editText=findViewById<View>(R.id.editText) as EditText
         editTextnote=findViewById<View>(R.id.editTextnote) as EditText
@@ -78,10 +79,10 @@ class AddItem : AppCompatActivity() {
             count++
             d=true
             if (count % 2 != 0){
-                textView2!!.visibility = View.INVISIBLE
+                txtView2.visibility = View.INVISIBLE
                 editText!!.visibility = View.INVISIBLE
                 date_view!!.visibility = View.INVISIBLE
-                textView4!!.visibility = View.INVISIBLE
+                txtView4.visibility = View.INVISIBLE
                 calender!!.visibility = View.VISIBLE
                 txtView3!!.visibility=View.INVISIBLE
                 imgbutton1!!.visibility=View.INVISIBLE
@@ -94,9 +95,9 @@ class AddItem : AppCompatActivity() {
 
             }
             else if (count % 2 == 0){
-                textView2!!.visibility = View.VISIBLE
+                txtView2.visibility = View.VISIBLE
                 editText!!.visibility = View.VISIBLE
-                textView4!!.visibility = View.VISIBLE
+                txtView4.visibility = View.VISIBLE
                 date_view!!.visibility = View.VISIBLE
                 calender!!.visibility = View.GONE
                 txtView3!!.visibility=View.VISIBLE
@@ -119,7 +120,7 @@ class AddItem : AppCompatActivity() {
             count++
             d1=true
             if (count % 2 != 0) {
-                textView2!!.visibility = View.INVISIBLE
+                txtView2.visibility = View.INVISIBLE
                 editText!!.visibility = View.INVISIBLE
                 time!!.visibility= View.INVISIBLE
                 timePicker1!!.visibility = View.VISIBLE
@@ -133,7 +134,7 @@ class AddItem : AppCompatActivity() {
 
             }
             else if (count % 2 == 0){
-                textView2!!.visibility = View.VISIBLE
+                txtView2.visibility = View.VISIBLE
                 editText!!.visibility = View.VISIBLE
                 time!!.visibility = View.VISIBLE
                 timePicker1!!.visibility = View.GONE
