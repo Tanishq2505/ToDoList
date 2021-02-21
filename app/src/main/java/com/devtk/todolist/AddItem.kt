@@ -1,4 +1,4 @@
-package com.codingninjassrm.letstodoapp
+package com.devtk.todolist
 
 import android.app.AlarmManager
 import android.app.NotificationChannel
@@ -10,19 +10,15 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.dscrecruit.todolist.HomepageActivity
-import com.dscrecruit.todolist.R
-import com.dscrecruit.todolist.taskname
+import com.devtk.todolist.HomepageActivity
+import com.devtk.todolist.R
+import com.devtk.todolist.taskname
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import org.w3c.dom.Text
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 
 class AddItem : AppCompatActivity() {

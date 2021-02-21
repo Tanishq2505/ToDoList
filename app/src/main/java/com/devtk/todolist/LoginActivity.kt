@@ -1,4 +1,4 @@
-package com.dscrecruit.todolist
+package com.devtk.todolist
 
 import android.content.DialogInterface
 import android.content.Intent

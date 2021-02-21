@@ -1,4 +1,4 @@
-package com.dscrecruit.todolist
+package com.devtk.todolist
 
 import org.junit.Test
 

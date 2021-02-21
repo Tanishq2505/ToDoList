@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dscrecruit.todolist">
+    package="com.devtk.todolist">
 
     <application
         android:allowBackup="true"
@@ -9,22 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoList">
-        <activity android:name=".ProfileActivity"
+        <activity android:name=".TaskDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.devtk.todolist.HomepageActivity" />
+        </activity>
+        <activity
+            android:name="com.devtk.todolist.ProfileActivity"
             android:label="Profile">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomepageActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.devtk.todolist.HomepageActivity" />
         </activity>
-        <activity android:name="com.codingninjassrm.letstodoapp.AddItem"
+        <activity
+            android:name=".AddItem"
             android:label="Add Item">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomepageActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.devtk.todolist.HomepageActivity" />
         </activity>
         <activity
-            android:name=".HomepageActivity"
+            android:name="com.devtk.todolist.HomepageActivity"
             android:label="All Tasks" />
-        <activity android:name=".SignupActivity" />
+        <activity android:name="com.devtk.todolist.SignupActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.devtk.todolist.LoginActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +41,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.devtk.todolist.MainActivity" />
     </application>
 
 </manifest>

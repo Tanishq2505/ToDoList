@@ -9,7 +9,6 @@
     android:focusable="true"
     android:id="@+id/tasks_layout_cv"
     android:orientation="vertical"
-    android:backgroundTintMode="screen"
     android:background="@drawable/bg_taskname">
 
     <TextView

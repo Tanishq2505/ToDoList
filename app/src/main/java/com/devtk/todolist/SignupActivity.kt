@@ -1,4 +1,4 @@
-package com.dscrecruit.todolist
+package com.devtk.todolist
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,6 @@ import android.util.Patterns
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import org.w3c.dom.Text
 
 class SignupActivity : AppCompatActivity() {
     var database = FirebaseDatabase.getInstance().reference

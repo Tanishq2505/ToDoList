@@ -1,4 +1,4 @@
-package com.dscrecruit.todolist
+package com.devtk.todolist
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +7,9 @@ import android.os.Handler
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.os.HandlerCompat.postDelayed
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.codingninjassrm.letstodoapp.AddItem
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -31,12 +29,18 @@ class HomepageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
         findViewById<RecyclerView>(R.id.all_tasks_recycler).layoutManager = LinearLayoutManager(this)
+//        if (isDarkModeOn) {
+//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//        }
+//        else {
+//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)}
         fetchNotes()
         val b_navbar = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         b_navbar.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.addTask_button -> {
                     startActivity(Intent(this, AddItem::class.java))
+                    b_navbar.menu.findItem(R.id.home_button).isChecked = true
                     true
                 }
                 R.id.profile_button -> {
@@ -92,20 +96,19 @@ class HomepageActivity : AppCompatActivity() {
                     findViewById<RecyclerView>(R.id.all_tasks_recycler).adapter = adapter
 
 //
-//                    adapter.setOnItemClickListener { item, view ->
-//                        val userData = item as tasks_viewholder
-//                        val intent = Intent(view.context, TaskDetailsActivity::class.java)
-//                        intent.putExtra(TASK_NAME_KEY, userData.user.name)
-//                        intent.putExtra(TASK_HOUR_KEY, userData.user.hour)
-//                        intent.putExtra(TASK_MINUTE_KEY, userData.user.minutes)
-//                        intent.putExtra(TASK_DATE_KEY, userData.user.date)
-//                        intent.putExtra(TASK_NOTE_KEY, userData.user.note)
-//                        intent.putExtra(TASK_COMPLETED_KEY, userData.user.status)
-//                        intent.putExtra(TASK_UID_KEY, userData.user.key)
-//                        finish()
-//                        startActivity(intent)
-//////
-//                    }
+                    adapter.setOnItemClickListener { item, view ->
+                        val userData = item as tasks_viewholder
+                        val intent = Intent(view.context, TaskDetailsActivity::class.java)
+                        intent.putExtra(TASK_NAME_KEY, userData.user.task_name)
+                        intent.putExtra(TASK_HOUR_KEY, userData.user.hour)
+                        intent.putExtra(TASK_MINUTE_KEY, userData.user.min)
+                        intent.putExtra(TASK_DATE_KEY, userData.user.date)
+                        intent.putExtra(TASK_NOTE_KEY, userData.user.note)
+                        intent.putExtra(TASK_COMPLETED_KEY, userData.user.status)
+                        intent.putExtra(TASK_UID_KEY, userData.user.key)
+                        startActivity(intent)
+////
+                    }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
