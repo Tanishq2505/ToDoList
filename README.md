@@ -1,6 +1,6 @@
 <h1 align="center">A ToDo List App to record all your ToDos!</h1>
 <hr>
-<p align="left">
+<p align="center">
 <p>Login Page</p>
 <img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/login.png?raw=true" width="108" height="216">
 <p>SignUp Page</p>
