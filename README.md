@@ -1,5 +1,8 @@
 <h1 align="center">A ToDo List App to record all your ToDos!</h1>
 <hr>
+Login Page             |  SignUp Page
+:-------------------------:|:-------------------------:
+![](https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/login.png?raw=true)  |  ![](https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/signup.png?raw=true)
 <p align="left">
 <p>Login Page</p>
 <img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/login.png?raw=true" width="108" height="216">
