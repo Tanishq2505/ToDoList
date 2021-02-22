@@ -1,5 +1,6 @@
 <h1 align="center">A ToDo List App to record all your ToDos!</h1>
 <hr>
+<p float="left">
 <p>Login Page</p>
 <img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/login.png?raw=true" width="108" height="216">
 <p>SignUp Page</p>
@@ -14,3 +15,4 @@
 <img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/profile.png?raw=true" height=216 weight=108>
 <p>Dark Mode</p>
 <img src = "https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/night_mode.png?raw=true" height = 216 width = 108>
+</p>
