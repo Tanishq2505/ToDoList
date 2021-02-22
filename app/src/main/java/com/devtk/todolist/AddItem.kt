@@ -67,6 +67,7 @@ class AddItem : AppCompatActivity() {
         imgbutton = findViewById<View>(R.id.imageButton) as ImageButton
         submit = findViewById<View>(R.id.submit) as Button
 
+
         calender = findViewById<View>(R.id.calender) as DatePicker
 
 
@@ -118,7 +119,9 @@ class AddItem : AppCompatActivity() {
             if (count % 2 != 0) {
                 txtView2.visibility = View.INVISIBLE
                 editText!!.visibility = View.INVISIBLE
+                imgbutton!!.visibility = View.GONE
                 time!!.visibility= View.INVISIBLE
+                txtView4.visibility = View.INVISIBLE
                 timePicker1!!.visibility = View.VISIBLE
                 txtView3!!.visibility=View.INVISIBLE
                 submit!!.visibility=View.INVISIBLE
@@ -132,7 +135,9 @@ class AddItem : AppCompatActivity() {
             else if (count % 2 == 0){
                 txtView2.visibility = View.VISIBLE
                 editText!!.visibility = View.VISIBLE
+                imgbutton!!.visibility = View.VISIBLE
                 time!!.visibility = View.VISIBLE
+                txtView4.visibility = View.VISIBLE
                 timePicker1!!.visibility = View.GONE
                 txtView3!!.visibility=View.VISIBLE
                 submit!!.visibility=View.VISIBLE
@@ -150,7 +155,7 @@ class AddItem : AppCompatActivity() {
 
         submit!!.setOnClickListener{
 
-            var status="INCOMPLETE"
+            var status="INCOMPLETED"
 
             var n=editTextnote!!.text.toString()
             var task_name= editText!!.text.toString()
@@ -170,10 +175,10 @@ class AddItem : AppCompatActivity() {
 
 
                     val myDate=(calender!!.year.toString() + "/"
-                            + (calender!!.month.toString() + 1) + "/" + calender!!.dayOfMonth.toString())+" "+timePicker1!!.currentHour+":"+timePicker1!!.currentMinute+":0"
+                            + (calender!!.month.toString() + 1) + "/" + calender!!.dayOfMonth.toString())+" "+timePicker1!!.hour+":"+timePicker1!!.minute+":0"
                     val spdf = SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
                     val date = spdf.parse(myDate)
-                    val timeInMillis = date.time
+                    val timeInMillis = date!!.time
                     Log.d("time", timeInMillis.toString())
 
                     alarmManager[AlarmManager.RTC_WAKEUP, timeInMillis] = pendingIntent

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.service.autofill.Validators.not
 import android.text.InputType
 import android.util.Patterns
 import android.widget.*
@@ -95,7 +96,10 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this, HomepageActivity::class.java))
 
                 finish()
-            }else{
+            }else if(currentUser.isAnonymous){
+                Toast.makeText(baseContext,"No Account Found for this email address",Toast.LENGTH_SHORT).show()
+            }
+            else{
                 Toast.makeText(baseContext, "Please verify your email address",
                     Toast.LENGTH_SHORT).show()
             }

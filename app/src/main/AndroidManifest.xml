@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToDoList">
-        <activity android:name=".TaskDetailsActivity">
+        <activity android:name=".TaskDetailsActivity"
+            android:label="Task Details">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.devtk.todolist.HomepageActivity" />
@@ -31,17 +32,24 @@
         <activity
             android:name="com.devtk.todolist.HomepageActivity"
             android:label="All Tasks" />
-        <activity android:name="com.devtk.todolist.SignupActivity" />
+        <activity android:name="com.devtk.todolist.SignupActivity"
+            android:label="Sign Up">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"/>
+        </activity>
         <activity
             android:name="com.devtk.todolist.LoginActivity"
             android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name="com.devtk.todolist.MainActivity"
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.devtk.todolist.MainActivity" />
     </application>
 
 </manifest>

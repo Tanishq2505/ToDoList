@@ -22,9 +22,7 @@ class TaskDetailsActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         setContentView(R.layout.activity_task_details)
 
 
@@ -141,6 +139,11 @@ class TaskDetailsActivity : AppCompatActivity() {
             edit_btn.visibility = View.VISIBLE
             task_details_mac.visibility = View.VISIBLE
             task_details_delete_btn.visibility = View.VISIBLE
+            tv_date_view.isEnabled = false
+            tv_hour_view.isEnabled = false
+            tv_task_name_var.isEnabled = false
+            tv_minutes_view.isEnabled = false
+            tv_task_notes.isEnabled = false
         }
         val delete_btn =  findViewById<Button>(R.id.task_details_delete_btn)
         delete_btn.setOnClickListener {

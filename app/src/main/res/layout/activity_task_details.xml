@@ -18,8 +18,7 @@
         app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186"
-        android:textColor="@color/white"/>
+        app:layout_constraintVertical_bias="0.186"/>
 
     <TextView
         android:id="@+id/textView"
@@ -42,8 +41,7 @@
         app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179"
-        android:textColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.179"/>
 
     <EditText
         android:id="@+id/task_details_task_name"
@@ -54,8 +52,7 @@
         app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071"
-        android:textColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.071"/>
 
     <TextView
         android:id="@+id/textView14"
@@ -79,8 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312"
-        android:textColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.312"/>
 
     <EditText
         android:id="@+id/minutes_view"
@@ -91,8 +87,7 @@
         app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309"
-        android:textColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.309"/>
 
     <TextView
         android:id="@+id/textView9"
@@ -129,8 +124,7 @@
         app:layout_constraintHorizontal_bias="0.827"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        android:textColor="@color/black"/>
+        app:layout_constraintVertical_bias="0.499"/>
 
     <Button
         android:id="@+id/task_details_edit_b"
@@ -151,7 +145,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:text="Mark As Complete"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.532"
@@ -165,7 +158,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:text="Delete"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.873"
@@ -179,7 +171,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="84dp"
         android:text="Save"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.272"
@@ -193,7 +184,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="84dp"
         android:text="Cancel"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.804"

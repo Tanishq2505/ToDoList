@@ -1,28 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_height="57dp"
+<RelativeLayout android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="4dp"
     android:elevation="5dp"
     android:clickable="true"
     android:focusable="true"
     android:id="@+id/tasks_layout_cv"
-    android:orientation="vertical"
-    android:background="@drawable/bg_taskname">
+    android:orientation="horizontal"
+    android:background="@drawable/bg_taskname"
+    android:layout_margin="5dp">
 
     <TextView
         android:id="@+id/task_name_cv"
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:padding="13dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="118dp"
         android:text="All Tasks"
-
         android:textSize="18sp"
-        />
+        android:padding="10dp"/>
 
+    <ImageButton
+        android:id="@+id/mac_btn_task"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:background="@color/trans"
+        app:srcCompat="@drawable/ic_baseline_done_24"/>
+    <ImageButton
+        android:id="@+id/mai_btn_task"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/trans"
+        app:srcCompat="@drawable/ic_mai"
+        android:visibility="gone"/>
 
-
+    <ImageButton
+        android:id="@+id/del_btn_task"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="59dp"
+        android:background="@color/trans"
+        app:srcCompat="@drawable/ic_delete" />
 
 
 </RelativeLayout>
