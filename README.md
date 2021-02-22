@@ -1,13 +1,9 @@
+<style></style>
 <h1 align="center">A ToDo List App to record all your ToDos!</h1>
 <hr>
-Login Page             |  SignUp Page
-:-------------------------:|:-------------------------:
-![](https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/login.png?raw=true)  |  ![](https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/signup.png?raw=true)
 <p align="left">
-<p>Login Page</p>
-<img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/login.png?raw=true" width="108" height="216">
-<p>SignUp Page</p>
-<img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/signup.png?raw=true" width="108" height="216"></p>
+<p>Login Page</p><p>SignUp Page</p>
+<img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/login.png?raw=true" width="108" height="216">&nbsp;<img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/signup.png?raw=true" width="108" height="216">
 <p>Home Page</p>
 <img src="https://github.com/Tanishq2505/ToDoList/blob/v1.0-beta/ToDo%20List%20screenshots/all_tasks.png?raw=true" height=216 width="108">
 <p>Task Details</p>
