@@ -1,4 +1,4 @@
-]<h1 align="center">A ToDo List App to record all your ToDos!</h1>
+<h1 align="center">A ToDo List App to record all your ToDos!</h1>
 <hr>
 <p align="left">
 <p>| Login Page &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| SignUp Page&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;| Home Page &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Task Details&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;| Add Task&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Profile Page&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;| Dark Mode</p>
