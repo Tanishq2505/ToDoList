@@ -11,52 +11,28 @@
     android:background="@drawable/bg_taskname"
     android:layout_margin="5dp">
 
+    <ImageView
+        android:id="@+id/background_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        />
     <TextView
         android:id="@+id/task_name_cv"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="118dp"
         android:text="All Tasks"
         android:textSize="18sp"
         android:padding="10dp"/>
 
-    <ImageButton
-        android:id="@+id/mac_btn_task"
-        android:layout_width="54dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="5dp"
-        android:background="@color/trans"
-        app:srcCompat="@drawable/ic_baseline_done_24"/>
-    <ImageButton
-        android:id="@+id/mai_btn_task"
-        android:layout_width="54dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="0dp"
-        android:background="@color/trans"
-        app:srcCompat="@drawable/ic_mai"
-        android:visibility="gone"/>
 
-    <ImageButton
-        android:id="@+id/del_btn_task"
-        android:layout_width="54dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="59dp"
-        android:background="@color/trans"
-        app:srcCompat="@drawable/ic_delete" />
 
 
 </RelativeLayout>
