@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "203758409844",
+    "firebase_url": "https://todolist-dsc-default-rtdb.firebaseio.com",
+    "project_id": "todolist-dsc",
+    "storage_bucket": "todolist-dsc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203758409844:android:a377270019eaee19dd1921",
+        "android_client_info": {
+          "package_name": "com.dscrecruit.todolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203758409844-mrsi71g9udpovj25qun109lb40dbuo7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJWBsoxuBgm8QiBbKQXWFisKJFIEuQytw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203758409844-mrsi71g9udpovj25qun109lb40dbuo7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,19 +20,36 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         />
+
     <TextView
-        android:id="@+id/task_name_cv"
-        android:layout_width="match_parent"
+        android:id="@+id/task_name_tv"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="0dp"
+        android:padding="10dp"
         android:text="All Tasks"
-        android:textSize="18sp"
-        android:padding="10dp"/>
+        android:textSize="18sp" />
 
-
+    <TextView
+        android:id="@+id/date_view_tv"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-157dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/task_name_tv"
+        android:padding="10dp"
+        android:text="00/00/0000"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>

@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.ItemTouchHelper.SimpleCallback
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -28,6 +29,7 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
+import org.w3c.dom.Text
 
 
 var database = FirebaseDatabase.getInstance().reference
@@ -42,6 +44,7 @@ class HomepageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_homepage)
         findViewById<RecyclerView>(R.id.all_tasks_recycler).layoutManager = LinearLayoutManager(this)
         val swipeRefreshLayout = findViewById<SwipeRefreshLayout>(R.id.refreshRecycler)
+
         val sharedPreferences = getSharedPreferences("sharedPrefs", AppCompatActivity.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         val mode = AppCompatDelegate.getDefaultNightMode()
@@ -102,7 +105,7 @@ class HomepageActivity : AppCompatActivity() {
         }
         
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-            val task_name_tv = viewHolder.itemView.findViewById<TextView>(R.id.task_name_cv)
+            val task_name_tv = viewHolder.itemView.findViewById<TextView>(R.id.task_name_tv)
             val noteName = task_name_tv.text
             if(direction == ItemTouchHelper.LEFT){
                 val position = viewHolder.adapterPosition
@@ -251,11 +254,13 @@ class HomepageActivity : AppCompatActivity() {
         database.child("Users").child(firebaseAuthCUser).child("Notes").addListenerForSingleValueEvent(
             object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-
+                    val shimmerFrame = findViewById<ShimmerFrameLayout>(R.id.shimmerFrame)
 
                     snapshot.children.forEach {
                         val name_display = it.getValue(Notes::class.java)
                         if (name_display != null) {
+                            shimmerFrame.stopShimmer()
+                            shimmerFrame.visibility = View.GONE
                             adapter.add(tasks_viewholder(adapter, name_display))
 
                         }
@@ -288,8 +293,10 @@ class HomepageActivity : AppCompatActivity() {
 class tasks_viewholder(val adapter: GroupAdapter<GroupieViewHolder>, val user: Notes): Item<GroupieViewHolder>() {
 
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-        val task_name_tv = viewHolder.itemView.findViewById<TextView>(R.id.task_name_cv)
+        val task_name_tv = viewHolder.itemView.findViewById<TextView>(R.id.task_name_tv)
+        val dateView = viewHolder.itemView.findViewById<TextView>(R.id.date_view_tv)
         task_name_tv.text = user.task_name
+        dateView.text = user.date
         if (user.status == "COMPLETED"){
             task_name_tv.paintFlags = task_name_tv.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
         }
