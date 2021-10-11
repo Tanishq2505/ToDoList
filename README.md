@@ -8,8 +8,8 @@ A ToDo List App to record all your tasks and cross them out when you complete th
 <hr>
 
 <h3>To send a Pull Request, follow the steps below:<br>
-  1. Fork this repository
-  2. Clone the forked repository on your local device.
-  3. Do some changes.
-  4. Push the changes into another branch. (Main branch changes will not be accepted!)
-  5. Send a pull request.
+  1. Fork this repository<br>
+  2. Clone the forked repository on your local device.<br>
+  3. Do some changes.<br>
+  4. Push the changes into another branch. (Main branch changes will not be accepted!)<br>
+  5. Send a pull request.<br>
